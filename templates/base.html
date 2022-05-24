@@ -23,8 +23,17 @@
 			<span></span>
 			<ul>
                 <li><a href="\">Home</a></li>
+				{% for category in categories %}
+				<li><a href="\category/{{ category[0] }}">{{category[1]}}</a></li>
+				{% endfor %}
+
+			{% if logged_in %}
+				<li><a href="\logout">Logout</a></li>
+		{% else %}
+				<li><a href="\login">Login</a></li>
 
 			</ul>
+			{% endif %}
 		</nav>
 
 
@@ -41,7 +50,7 @@
 
 		<footer>
 			<p>
-				&copy; Enter your name here 2020
+				&copy; Dominic 2022
 			</p>
 		</footer>
 
